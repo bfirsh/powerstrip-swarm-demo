@@ -54,7 +54,7 @@ This demo consists of 3 servers - a master and 2 nodes.
 The master runs the swarm deamon and the flocker control server - the 2 nodes each run powerstrip and the 2 powerstrip adapters (for flocker and weave).
 
 ```
-          docker client
+             compose
 
                 |
 
@@ -100,4 +100,4 @@ The IP address to connect to the database is hardcoded - when we move the databa
 
 ## conclusion
 
-We have moved both an IP address and a data volume across hosts using nothing more than the docker client!
+We have moved both an IP address and a data volume across hosts using nothing more than compose!
