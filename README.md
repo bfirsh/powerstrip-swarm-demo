@@ -1,6 +1,6 @@
 # powerstrip-swarm-demo
 
-A demo of [powerstrip-flocker](https://github.com/clusterhq/powerstrip-flocker) and [powerstrip-weave](https://github.com/binocarlos/powerstrip-weave) working with [swarm](https://github.com/docker/swarm)
+A demo of [powerstrip-flocker](https://github.com/clusterhq/powerstrip-flocker) and [powerstrip-weave](https://github.com/binocarlos/powerstrip-weave) working with [swarm](https://github.com/docker/swarm) and [compose](https://github.com/docker/compose)
 
 ## install
 
@@ -8,6 +8,7 @@ First you need to install:
 
  * [virtualbox](https://www.virtualbox.org/wiki/Downloads)
  * [vagrant](http://www.vagrantup.com/downloads.html)
+ * [compose](https://docs.docker.com/compose/)
 
 ## start vms
 
@@ -19,14 +20,14 @@ $ cd powerstrip-swarm-demo
 $ vagrant up
 ```
 
-## automated example
-
-We have included a script that will run through each of the commands shown above.  To run the script, run the following commnads:
+## running with compose
 
 ```bash
-$ vagrant ssh master
-master$ sudo bash /vagrant/run.sh demo
+$ export DOCKER_HOST=tcp://172.16.255.250:2375
+$ docker-compose up -d
 ```
+
+Then go to http://172.16.255.250:8080 to see the app.
 
 ## info
 

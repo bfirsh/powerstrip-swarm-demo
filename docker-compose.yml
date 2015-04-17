@@ -1,0 +1,14 @@
+web:
+  image: binocarlos/multi-http-demo-server
+  ports:
+   - "8080:80"
+  environment:
+    WEAVE_CIDR: "10.255.0.11/24"
+    API_IP: "10.255.0.10"
+api:
+  image: binocarlos/multi-http-demo-api
+  environment:
+    - "WEAVE_CIDR=10.255.0.10/24"
+    - "constraint:storage==disk"
+  volumes:
+   - "/flocker/data1:/tmp"
