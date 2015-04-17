@@ -27,7 +27,7 @@ $ export DOCKER_HOST=tcp://172.16.255.250:2375
 $ docker-compose up -d
 ```
 
-Then go to http://172.16.255.250:8080 to see the app.
+Then run `docker-compose ps` to see what IP and port the web server is running on, which you can visit in a browser.
 
 ## info
 
